@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DosBox4SK</string>
+    <string name="debug">WARNING: DEBUG Mode is Enabled</string>
+    <string name="restart">Restart for changes to take effect</string>
+    <string name="manual">Manually edit /sdcard/dosboxsk/dosbox.conf to set configuration</string>
+    <string name="cont">Continue</string>
+    <!--
+        <string name="absdefault">Absolute Tracking Calibration Reset</string>
+    <string name="abscalibrate">Tap visible DOS pointer to calibrate</string>
+    <string name="abscalibrate_success">Mouse Pointer Calibrated</string>
+    -->
+    <!-- DOSBOX SETTINGS -->
+    <string-array name="dosmemsize">
+        <item>1 MB</item>
+        <item>2 MB</item>
+        <item>4 MB</item>
+        <item>8 MB</item>
+        <item>16 MB</item>
+        <item>32 MB</item>
+        <item>64 MB</item>
+        <item>128 MB</item>
+        <item>256 MB</item>
+    </string-array>
+    <string-array name="dosmemsize_values">
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+        <item>16</item>
+        <item>32</item>
+        <item>64</item>
+        <item>128</item>
+        <item>256</item>
+    </string-array>
+    <string-array name="dosframeskip">
+        <item>0</item>
+        <item>1</item>
+        <item>2 (default)</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="dosframeskip_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="doscycles">
+        <item>auto (default)</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>4000</item>
+        <item>5000</item>
+        <item>6000</item>
+        <item>7000</item>
+        <item>8000</item>
+        <item>9000</item>
+        <item>10000</item>
+        <item>11000</item>
+        <item>12000</item>
+        <item>13000</item>
+        <item>14000</item>
+        <item>15000</item>
+        <item>16000</item>
+        <item>17000</item>
+        <item>18000</item>
+        <item>19000</item>
+        <item>20000</item>
+        <item>21000</item>
+        <item>22000</item>
+        <item>23000</item>
+        <item>24000</item>
+        <item>25000</item>
+        <item>26000</item>
+        <item>27000</item>
+        <item>28000</item>
+        <item>29000</item>
+        <item>30000</item>
+    </string-array>
+    <string-array name="doscycles_values">
+        <item>auto</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>4000</item>
+        <item>5000</item>
+        <item>6000</item>
+        <item>7000</item>
+        <item>8000</item>
+        <item>9000</item>
+        <item>10000</item>
+        <item>11000</item>
+        <item>12000</item>
+        <item>13000</item>
+        <item>14000</item>
+        <item>15000</item>
+        <item>16000</item>
+        <item>17000</item>
+        <item>18000</item>
+        <item>19000</item>
+        <item>20000</item>
+        <item>21000</item>
+        <item>22000</item>
+        <item>23000</item>
+        <item>24000</item>
+        <item>25000</item>
+        <item>26000</item>
+        <item>27000</item>
+        <item>28000</item>
+        <item>29000</item>
+        <item>30000</item>
+    </string-array>
+    <string-array name="doscpu">
+        <item>dynamic (default)</item>
+        <item>auto</item>
+        <item>normal</item>
+        <item>simple</item>
+    </string-array>
+    <string-array name="doscpu_values">
+        <item>dynamic</item>
+        <item>auto</item>
+        <item>normal</item>
+        <item>simple</item>
+    </string-array>
+    <string-array name="dossbtype">
+        <item>SoundBlaster 2 (default)</item>
+        <item>SoundBlaster 16 (slow)</item>
+    </string-array>
+    <string-array name="dossbtype_values">
+        <item>sb2</item>
+        <item>sb16</item>
+    </string-array>
+    <!-- APP CONFIGURATION -->
+    <string-array name="confscalemode">
+        <item>Fast Scale</item>
+        <item>HQ Scale (slower)</item>
+    </string-array>
+    <string-array name="confscalemode_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <!-- ORIENTATION -->
+    <string-array name="confrotation">
+        <item>Auto</item>
+        <item>Portrait</item>
+        <item>Landscape</item>
+    </string-array>
+    <string-array name="confrotation_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="confinputmode">
+        <item>TouchScreen Mouse</item>
+        <item>TouchScreen Joystick</item>
+        <item>Physical Mouse</item>
+        <item>Physical Joystick</item>
+        <item>Scroll Screen</item>
+    </string-array>
+    <string-array name="confinputmode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="confmousetracking">
+        <item>Absolute (experimental)</item>
+        <item>Relative</item>
+    </string-array>
+    <string-array name="confmousetracking_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="confinputlatency">
+        <item>Normal (default)</item>
+        <item>Accurate (slow)</item>
+    </string-array>
+    <string-array name="confinputlatency_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <!-- KEYMAPS -->
+    <string-array name="confmap">
+        <item>None</item>
+        <item>CTRL</item>
+        <item>ALT</item>
+        <item>SHIFT</item>
+        <item>ESC</item>
+        <item>TAB</item>
+        <item>F1</item>
+        <item>F2</item>
+        <item>F3</item>
+        <item>F4</item>
+        <item>F5</item>
+        <item>F6</item>
+        <item>F7</item>
+        <item>F8</item>
+        <item>F9</item>
+        <item>F10</item>
+        <item>F11</item>
+        <item>F12</item>
+        <item>Left Click</item>
+        <item>Right Click</item>
+    </string-array>
+    <string-array name="confmap_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+    </string-array>
+    <string-array name="confmapback">
+        <item>None</item>
+        <item>ESC</item>
+        <item>TAB</item>
+        <item>F1</item>
+        <item>F2</item>
+        <item>F3</item>
+        <item>F4</item>
+        <item>F5</item>
+        <item>F6</item>
+        <item>F7</item>
+        <item>F8</item>
+        <item>F9</item>
+        <item>F10</item>
+        <item>F11</item>
+        <item>F12</item>
+        <item>Left Click</item>
+        <item>Right Click</item>
+    </string-array>
+    <string-array name="confmapback_values">
+        <item>0</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+    </string-array>
+    <!-- GESTURES -->
+    <string-array name="confgesture_swipe">
+        <item>None</item>
+        <item>Show Keyboard</item>
+        <item>Hide Keyboard</item>
+        <item>Show Menu</item>
+        <item>Hide Menu</item>
+    </string-array>
+    <string-array name="confgesture_swipe_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="confgesture_singletap">
+        <item>None</item>
+        <item>Left Click (default)</item>
+        <item>Right Click</item>
+    </string-array>
+    <string-array name="confgesture_singletap_values">
+        <item>0</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="confgesture_doubletap">
+        <item>None</item>
+        <item>Left Click</item>
+        <item>Right Click (default)</item>
+    </string-array>
+    <string-array name="confgesture_doubletap_values">
+        <item>0</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+
+</resources>

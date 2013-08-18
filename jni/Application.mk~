@@ -1,0 +1,11 @@
+# The ARMv7 is significanly faster due to the use of the hardware FPU
+APP_ABI := armeabi-v7a
+APP_STL := stlport_static
+#
+APP_CFLAGS += -O3 -mthumb-interwork -ffast-math -fsingle-precision-constant \
+                   -ftree-vectorize -mvectorize-with-neon-quad -mfloat-abi=softfp -mfpu=neon  -mtune=cortex-a15  -mcpu=cortex-a15  \
+                   -fprefetch-loop-arrays -funroll-loops -fno-strict-aliasing -fmerge-all-constants  \
+                   -pipe -mlong-calls -fdelete-null-pointer-checks \
+                   -DC_TARGETCPU=ARMV7LE -DC_UNALIGNED_MEMORY=1 -DHAVE_NEON=1 -fpermissive -DC_DYNREC=0
+APP_PLATFORM := android-14
+APP_OPTIM := release

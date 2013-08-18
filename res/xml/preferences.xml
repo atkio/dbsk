@@ -1,0 +1,282 @@
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="Advanced DosBox Config">
+  	 <PreferenceScreen
+		android:key="detail"
+		android:title="DosBox Settings"
+		android:summary="Advanced DosBox configuration">
+	    <ListPreference
+    		android:key="dosmemsize"
+      		android:title="Memory Size"
+      		android:entries="@array/dosmemsize"
+		    android:entryValues="@array/dosmemsize_values"
+		    android:defaultValue="4"
+      		android:summary="Set the amount of memory available to DOS"
+    	/>
+	    <ListPreference
+    		android:key="dosframeskip"
+      		android:title="Frame Skip"
+      		android:entries="@array/dosframeskip"
+		    android:entryValues="@array/dosframeskip_values"
+		    android:defaultValue="2"
+      		android:summary="Set the FrameSkip amount"
+    	/>
+	    <ListPreference
+    		android:key="doscycles"
+      		android:title="Cycles"
+      		android:entries="@array/doscycles"
+		    android:entryValues="@array/doscycles_values"
+		    android:defaultValue="auto"      		
+      		android:summary="DosBox Cycles Setting"
+    	/>
+	    <ListPreference
+    		android:key="doscpu"
+      		android:title="CPU Type"
+      		android:entries="@array/doscpu"
+		    android:entryValues="@array/doscpu_values"
+		    android:defaultValue="dynamic"      		
+      		android:summary="DosBox CPU Setting"
+    	/>
+	    <ListPreference
+      		android:key="dossbtype"
+      		android:title="Sound Device"
+	  		android:entries="@array/dossbtype"
+      		android:entryValues="@array/dossbtype_values"
+      		android:defaultValue="sb2"      		
+      		android:summary="Choose Soundblaster Emulation" />
+	    <EditTextPreference
+      		android:key="dosautoexec"
+      		android:title="Autoexec"
+      		android:textSize="11sp"
+      		android:defaultValue="mount c: /sdcard \nc:"    		
+      		android:summary="Edit the autoexec.bat" />	    
+      	<CheckBoxPreference
+      		android:key="dosautocpu"
+      		android:title="Force CPU Auto"
+      		android:defaultValue="false"
+      		android:summary="Give CPU auto priority to reduce audio skipping (may limit max cycles)" />
+	    <CheckBoxPreference
+      		android:key="dosmanualconf"
+      		android:title="Manual Mode"
+      		android:defaultValue="false"
+      		android:summary="Disable over-write of dosbox.conf" />
+	 </PreferenceScreen>
+  </PreferenceCategory>
+  <PreferenceCategory android:title="Input Preferences">
+      <ListPreference
+      	android:key="confinputmode"
+      	android:title="Select Input Mode"
+	  	android:entries="@array/confinputmode"
+      	android:entryValues="@array/confinputmode_values"
+      	android:defaultValue="0"
+      	android:summary="Select Joystick, Mouse or Scroll input" />
+      <ListPreference
+      	android:key="confmousetracking"
+      	android:title="Mouse Tracking"
+	  	android:entries="@array/confmousetracking"
+      	android:entryValues="@array/confmousetracking_values"
+      	android:defaultValue="1"
+      	android:summary="Choose Absolute or Relative mouse tracking" />
+<!--      <Preference
+        android:key="confabsolutecalibrate"
+        android:title="Calibrate Absolute Tracking"
+        android:summary="Touch the on screen mouse pointer to calibrate" />
+      <Preference
+        android:key="confabsolutedefault"
+        android:title="Reset Absolute Calibration"
+        android:summary="Reset absolute calibration to defaults" /> 
+   <PreferenceScreen
+		android:key="confmouseabsolutefactor"
+		android:title="Absolute Tracking Settings"
+		android:summary="Tweaks for Absolute Mouse Tracking">
+	   	<ListPreference
+    		android:key="confabs_xfactor"
+      		android:title="Mouse X Speed"
+      		android:entries="@array/confabs_factor"
+		    android:entryValues="@array/confabs_factor_values"
+		    android:defaultValue="2.0"
+      		android:summary="Absolute Horizontal Mouse Speed"
+    	/>
+	   	<ListPreference
+    		android:key="confabs_yfactor"
+      		android:title="Mouse Y Speed"
+      		android:entries="@array/confabs_factor"
+		    android:entryValues="@array/confabs_factor_values"
+		    android:defaultValue="1.0"
+      		android:summary="Absolute Vertical Mouse Speed"
+    	/> 
+	  </PreferenceScreen> -->
+      <ListPreference
+      	android:key="confinputlatency"
+      	android:title="Input Latency"
+	  	android:entries="@array/confinputlatency"
+      	android:entryValues="@array/confinputlatency_values"
+      	android:defaultValue="0"
+      	android:summary="Select Latency of input devices" />
+      <CheckBoxPreference
+      	android:key="confjoyoverlay"
+      	android:title="Overlay Joystick"
+      	android:defaultValue="false"
+      	android:summary="Show a Virtual Joystick on screen" />
+      <CheckBoxPreference
+      	android:key="confbuttonoverlay"
+      	android:title="Overlay Buttons"
+      	android:defaultValue="false"
+      	android:summary="Show Virtual Buttons on screen" />
+      <CheckBoxPreference
+      	android:key="confenabledpad"
+      	android:title="Enable DPad"
+      	android:defaultValue="false"
+      	android:summary="Use phone DPad/Optical Trackpad as input device" />
+      <EditTextPreference
+		android:key="confdpadsensitivity"
+		android:title="DPad sensitivity"
+		android:summary="Phone DPad/Optical Trackpad sensitivity value"
+      	android:defaultValue="7"
+		android:dialogTitle="Range is (1 - 25) [default 7]"
+	  />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="Gestures and Mappings">
+  	<PreferenceScreen
+		android:key="confkeymap"
+		android:title="Button Mapping"
+		android:summary="Customize button bindings">
+	   	<ListPreference
+    		android:key="confmap_volup"
+      		android:title="Map Volume Up Button"
+      		android:entries="@array/confmap"
+		    android:entryValues="@array/confmap_values"
+		    android:defaultValue="0"
+      		android:summary="Remap the function of the volume up button"
+    	/>
+	   	<ListPreference
+    		android:key="confmap_voldown"
+      		android:title="Map Volume Down Button"
+      		android:entries="@array/confmap"
+		    android:entryValues="@array/confmap_values"
+		    android:defaultValue="0"
+      		android:summary="Remap the function of the volume down button"
+    	/>
+    	<ListPreference
+    		android:key="confmap_back"
+      		android:title="Map Back Button"
+      		android:entries="@array/confmapback"
+		    android:entryValues="@array/confmapback_values"
+		    android:defaultValue="4"
+      		android:summary="Remap the function of the back button"
+    	/>
+	   	<ListPreference
+    		android:key="confmap_search"
+      		android:title="Map Search Button"
+      		android:entries="@array/confmap"
+		    android:entryValues="@array/confmap_values"
+		    android:defaultValue="0"
+      		android:summary="Remap the function of the search button"
+    	/> 
+	</PreferenceScreen>
+	<PreferenceScreen
+		android:key="confgestures"
+		android:title="Gesture Mapping"
+		android:summary="Customize gesture actions">
+	   	<ListPreference
+    		android:key="confgesture_swipeup"
+      		android:title="Swipe Up Action"
+      		android:entries="@array/confgesture_swipe"
+		    android:entryValues="@array/confgesture_swipe_values"
+		    android:defaultValue="0"
+      		android:summary="Configure Swipe Up action"
+    	/>
+	   	<ListPreference 
+    		android:key="confgesture_swipedown"
+      		android:title="Swipe Down Action"
+      		android:entries="@array/confgesture_swipe"
+		    android:entryValues="@array/confgesture_swipe_values"
+		    android:defaultValue="0"
+      		android:summary="Configure Swipe Down action"
+    	/>
+	    <ListPreference
+      		android:key="confgesture_singletap"
+      		android:title="Single Tap Action"
+   			android:entries="@array/confgesture_singletap"
+	    	android:entryValues="@array/confgesture_singletap_values"
+      		android:defaultValue="3"      	
+      		android:summary="Configure Single Tap for Touchscreen Mouse" />
+	    <ListPreference
+      		android:key="confgesture_doubletap"
+      		android:title="Double Tap Action"
+   			android:entries="@array/confgesture_doubletap"
+	    	android:entryValues="@array/confgesture_doubletap_values"
+      		android:defaultValue="4"      	
+      		android:summary="Configure Double Tap for TouchScreen Mouse" />
+	    </PreferenceScreen>
+      	<CheckBoxPreference
+      		android:key="confaltfix"
+      		android:title="Use physical ALT"
+      		android:defaultValue="false"
+      		android:summary="Use physical left ALT key instead of virt. left ALT" />    	
+	</PreferenceCategory>
+	<PreferenceCategory android:title="Screen and Rotation Settings">
+      <com.fishstix.dosbox.preference.SeekBarPreference android:key="confresizefactor"
+        android:title="Screen Scale Factor"
+        android:summary="Scale Factor for Scale Mode (Landscape)"
+        android:dialogMessage="Landscape Scale Factor"
+        android:defaultValue="100"
+        android:max="100" />
+      <ListPreference
+      	android:key="confscalemode"
+      	android:title="Scale Quality"
+	  	android:entries="@array/confscalemode"
+      	android:entryValues="@array/confscalemode_values"
+      	android:defaultValue="0"      		
+      	android:summary="Select Fast or HQ Scaling" />
+  	  <ListPreference
+     	android:key="confrotation"
+      	android:title="Rotation Settings"
+   		android:entries="@array/confrotation"
+	    android:entryValues="@array/confrotation_values"
+      	android:defaultValue="0"      	
+      	android:summary="Configure Auto/Portrait/Landscape rotation" />
+  	  <CheckBoxPreference
+      	android:key="confkeepaspect"
+      	android:title="Keep Aspect Ratio"
+      	android:defaultValue="true"
+      	android:summary="Maintain Scale Aspect Ratio in Landscape Mode" />  	  
+    </PreferenceCategory>
+
+  <PreferenceCategory android:title="Sound Preferences">
+  	  <CheckBoxPreference
+      	android:key="confsound"
+      	android:title="Enable Sound"
+      	android:defaultValue="true"
+      	android:summary="Emulate Audio Output (disable for more speed)" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="Performance Tweaks">
+      <CheckBoxPreference
+      	android:key="confturbocycle"
+      	android:title="Turbo Cyles"
+      	android:defaultValue="true"
+      	android:summary="Experimental Turbo Cycling" />
+      <CheckBoxPreference
+      	android:key="confturbovga"
+      	android:title="Turbo VGA"
+      	android:defaultValue="true"
+      	android:summary="Experimental Turbo VGA" />
+      <CheckBoxPreference
+      	android:key="confturbomixer"
+      	android:title="Turbo Audio"
+      	android:defaultValue="true"
+      	android:summary="Experimental Low Latency Audio" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="Other">
+    <CheckBoxPreference
+      	android:key="confdebug"
+      	android:title="Enable Debug"
+      	android:defaultValue="false"      	
+      	android:summary="Enable Debug Mode (SLOW)" />  
+    <Preference
+        android:key="version"
+        android:title="Version"
+        android:summary=""/>
+  </PreferenceCategory>
+  
+</PreferenceScreen>

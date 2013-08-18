@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title>Getting Started</title>
+
+</head>
+<body>
+	<h3>DosBox Turbo</h3>
+	<h4>About</h4>
+	<p>DosBox Turbo is a Android application based upon DosBox 0.74 and libSDL. Various optimizations were incorporated to allow for fast usage 
+	on modern Android smartphones.</p>
+	<p>Certain desktop features of DosBox were removed to allow for optimal memory use on Android.  Midi, Keymapper, screen capture and some other minor features
+	were removed from this version.</p>
+	<h4>Usage</h4>
+	<p>Upon startup, you will be greeted with a DOS Prompt. DosBox Turbo will attempt to mount the root of your SDCARD as the C: drive. If you need other mounting options, type <b>intro mount</b> at the prompt for further instructions.</p>
+	<p>DosBox configuration can be done either in the Menu's, or via the dosbox.conf file located in the /sdcard directory.  It is suggested that the in application menus are used for configuration settings, and that only advanced users
+	should modify the dosbox.conf file. Any changes to the dosbox.conf file will override the settings in the application menu.</p>
+	<h4>Configuration</h4>
+	<h5>DosBox Settings</h5>
+	<ol>
+		<li><b>Memory Size:</b> Defaults to 4 MB. Increase this only if the program you need to run needs more memory. Otherwise, keep this setting as small as possible.</li>
+		<li><b>Frame skip:</b> Defaults to 2. If your application is running slow, you can set this to a higher value.</li>
+		<li><b>Cycles:</b> Defaults to auto. The higher the value, the faster DosBox Turbo will try to run your game. Setting the value too high may cause skipping and audio distortion if your phone's CPU cannot keep up.</li>
+		<li><b>CPU Type:</b> Defaults to dynamic. Leave this setting on dynamic.  Any other value will slow down the emulation.</li>
+		<li><b>Sound Device:</b> Defaults to SoundBlaster 2. Use Soundblaster 16 for better compatability, but slightly slower speed.</li>
+		<li><b>Force CPU Auto:</b> Force auto cpu throttling, can improve sound skipping and mouse skipping issues at high cycles. (May limit maximum cycles).</li>
+		<li><b>Manual Mode:</b> Enable this setting to manually edit the dosbox.conf file.  (Not recommended)</li>
+	</ol>
+	<h5>Input Mode:</h5>
+	<ol>
+		<li><b>Touchscreen Mouse:</b>Enable virtual mouse emulation.</li>
+		<li><b>Touchscreen Joystick:</b> Enable virtual Joystick Emulation. Enable the overlay to view onscreen joypad.</li>
+		<li><b>Physical Mouse:</b> Use a hardware mouse (or trackpad). Must have Android 3.1 or higher. Right click will only work on Android 4.0+</li>
+		<li><b>Physical Joystick:</b> Use a hardware joystick.  Must have Android 3.1 or higher</li>
+		<li><b>Mouse Tracking:</b> Choose between absolute or relative tracking. Absolute will follow your finger.  Absolute mode will only work on DOS games that do not change how the mouse behaves. If you have mouse movement problems with absolute mode, use relative mode.</li>
+		<li><b>Enable DPad/Trackpad:</b> Default: OFF. If your phone has a Directional Pad or a optical trackpad, turn this option on to have it emulate a Mouse (in Mouse Input mode) or a Joystick (in Joystick Input mode). For phones without a trackpad or directional pad, its best to leave this option off, as it may interfere with the arrow keys on the keyboard.</li>
+	</ol>
+	<h5>Other Settings</h5>
+	<ol>
+		<li><b>Scale Factor:</b> Used to determine how much scaling is done, when the Scaling Mode is enabled.  Defaults to Maximum. </li>
+		<li><b>Smooth Scale:</b> When checked, HQ scaling routines are used.  For maximum speed, disable this. </li>
+		<li><b>Turbo VGA:</b> On some applications, using the Turbo VGA routines results in a speedup; however, this can be incompatible with some newer DOS apps.</li>
+		<li><b>Turbo Cycles:</b> Speeds up most DOS applications; however, may break compatability with a few apps. If your app is not running, try disabling this.</li>
+		<li><b>Turbo Audio:</b> Try very hard to reduce audio latency and take shortcuts to reduce cpu usage.  May break compatability. If your app is not running well, disable this setting and restart.</li>
+		<li><b>Keep Aspect Ratio:</b> With this setting disabled, the screen will stretch to full width in landscape mode. (default: off)</li>
+	</ol>
+
+	<p><b>Scale:</b> Enable/Disable Screen Scaling.</p>
+	
+	<p><b>Keys:</b> Use this menu to send Special Key Controls (CTRL, ESC, etc) to DOS.</p>
+	<h4>FAQ</h4>
+	<ol>
+		<li><b>Can I use a bluetooth mouse or my physical touchpad (Asus Transformer, etc)?</b></li>
+		Yes. As long as you are running Android 3.1 (Honeycomb) or higher, you can use external mice and joystick.  Select Input->Physical Mouse in the configuration settings.
+		
+		<li><b>Absolute Tracking is not following my finger perfectly.</b></li>
+		Some DOS programs change how the mouse behaves, either by taking relative movements and speeding up, or slowing down.  There is no way to tell if a DOS program is going to change mouse behavior.  If the DOS game changes the way the mouse
+		works, absolute mode will no longer work, you will be forced to use relative mode.  Absolute mode works for the majority of games, but not all.
+
+		<li><b>How do I use the right mouse button (right-click) on my Asus Transformer or bluetooth mouse?</b></li>
+		You will need to be running Android 4.0 (Ice Cream Sandwich) or higher to use the right click function.
+
+		<li><b>Why is my physical ALT key behaving strange on my keyboard?</b></li>
+		In order to support both physical and virtual keyboards, the LEFT ALT keymapping needed to be changed.  For physical keyboard users, either use the right ALT key, or
+		turn on the option "<i>Use physical ALT</i>" in the Settings.
+		
+		<li><b>I am having trouble typing &lt; or &gt; on my virtual keyboard.</b></li>
+		Please make sure that the setting "<i>Use physical ALT</i>" is disabled. 
+
+		<li><b>How can I use my phone's optical trackpad or directional pad as mouse or joystick input?</b></li>
+		Click the option <i>Enable DPad/Trackpad</i> in the settings menu.
+		
+		<li><b>My sound is skipping, what can I do?</b></li>
+		That is a symptom of having too high of a cycle rate.  Try lowering the cycle rate, or if lowering the cycle rate makes the game unplayable, you can try to use the "Force CPU auto" mode.
+
+		<li><b>Mouse clicks are being mis-interpreted or not registering.</b></li>
+		That is sometimes a symptom of having too high of a cycle rate.  Try lowering the cycle rate, or if lowering the cycle rate makes the game unplayable, you can try to use the "Force CPU auto" mode.
+		
+		<li><b>Help, the arrow keys on my keyboard are not working properly.</b></li>
+		Try disabling the <i>Enable DPad/Trackpad</i> setting.
+
+		<li><b>Can I change the screen size?</b></li>
+		Enable the Scale option by "menu->Scale->on". You can also rotate your device to landscape mode for a better screen fit, and adjust the scale factor in the Options menu.
+
+		<li><b>How can I improve performance??</b></li>
+		Disabling the Screen Scaling will significantly improve performance, aswell as disabling any overlays (joysticks or buttons).  Manually chaging the sample rate of the audio mixer to 8000Hz in the dosbox.conf file will improve performance, just make sure you
+		enable "Manual Mode" in the DosBox preference screen, or your changes will be overwritten.  Also, changing to a soundblaster 2 or soundblaster 1 will speed things up.  The default audiocard in DosBox Turbo is the SoundBlaster 16. 
+
+		<li><b>Why is my dosbox.conf file always being overwritten?</b></li>
+		If you want manually edit the dosbox.conf file, you need to select "Manual Mode" in the DosBox preferences before making changes.
+   
+		<li><b>Can I perform a mouse drag?</b></li>
+		Yes, in Touchscreen mouse mode, hold your finger for a long press, and then drag your finger.
+ 
+		<li><b>How do I press the buttons on the joystick?</b></li>
+		The Volume Up/Down keys emulate joystick buttons in Joystick mode, make sure it's enabled from Menu->Input->Vol Keys as buttons.
+
+		<li><b>How do I display the virtual joystick overlay on screen?</b></li>
+		Enabling overlays can adversely affect performance. First, enable joystick input mode, then enable the joystick overlay via Menu->Overlay->Show Overlay.
+ 
+		<li><b>How can I use arrow keys on the keyboard?</b></li>
+		You can use any Android keyboard with the emulator.  There are several gaming keyboards with arrow keys available in the Android Market.
+		  		
+		<li><b>Is the virtual joystick multi-touch capable?</b></li>
+		Yes. On Android 2.1+, the joystick supports full multi-touch. For users of Android 1.6 devices, unfortunately, your device does not support
+		multi-touch.
+		
+		<li><b>Help! My DOS game/application won't run!</b></li>
+		Check the compatability table on the DosBox website.  DosBox Turbo is based upon DosBox 0.74.  If the game shows as compatible, and it still does not run, please email me the settings
+		you used.		
+
+		<li><b>Where can I find the latest version of DosBox Turbo?</b></li>
+		DosBox Turbo is continually updated.  The latest version is always available on the <a href="market://details?id=com.fishstix.dosbox">Android Marketplace</a>.
+	</ol>
+		<br>
+		DosBox Turbo is licensed under the <a href="gpl/gpl.htm">GNU Public License v2.0</a>.	
+</body></html>
