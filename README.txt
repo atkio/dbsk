@@ -1,3 +1,4 @@
+Copyright (C) 2013 ATkio - Based upon DosBoxTurbo by Fishstix
 Copyright (C) 2012 Fishstix - Based upon DosBox & anDosBox by Locnet
 
 
@@ -21,3 +22,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 DosBoxTurbo is developed with Android NDK r7b and Android SDK Tools revision 8,
 using DOSBox 0.74 and SDL for Android 1.2 (header only) and anDosBox
 
+DosBox4SK is developed with Android NDK r8d and Android SDK Tools revision 8,
+optimized for snapdragon krait processor.
+
+see:
+http://www.youtube.com/playlist?list=PLiDHZCYrj91NbjLqK2kCihDKf6Xsi8KY6
